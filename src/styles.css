@@ -1,0 +1,57 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin-top: 40px;
+  background: linear-gradient(
+    to right,
+    rgba(17, 16, 16, 0.5),
+    rgba(1, 1, 124, 0.5)
+  );
+}
+
+.calculator {
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: minmax(100px, auto) repeat(5, 80px);
+}
+
+.calculator button {
+  font-size: 20px;
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.calculator button:hover {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 8px;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.previous-operand {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.current-operand {
+  font-size: 28px;
+  color: rgb(255, 255, 255);
+}
+
+.span-two {
+  grid-column: span 2;
+}
